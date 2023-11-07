@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Construction') {
             steps {
-                // Exécuter votre processus de construction (par exemple, Maven, Gradle, etc.)
+                dir('/home/destkop/DevOps_Project') {
                 sh 'mvn clean package'
             }
         }
