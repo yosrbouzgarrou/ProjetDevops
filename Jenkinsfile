@@ -17,6 +17,7 @@ pipeline {
                 dir('/home/destkop/DevOps_Project') {
                 sh 'mvn clean package'
             }
+            }
         }
         stage('Tests') {
             steps {
