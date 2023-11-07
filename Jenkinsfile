@@ -40,3 +40,12 @@ pipeline {
       //   }
     }
 }
+post {
+    failure {
+        emailext(
+            subject: "Build Failed",
+            body: "The build failed. Please check the console output for details.",
+            to: "yosr.bouzgarrou@esprit.tn"
+        )
+    }
+}
